@@ -1,0 +1,461 @@
+/* Warna Profesional */
+:root {
+  --primary-color: #1F2937;   /* Dark Slate */
+  --secondary-color: #3B82F6; /* Corporate Blue */
+  --accent-color: #E5E7EB;    /* Light Gray */
+  --text-color: #111827;      /* Rich Black */
+  --hover-color: #2563EB;     /* Blue Hover */
+  --background-color: #F9FAFB; /* Light Background */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+/* Header (h1) */
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+/* Slide-in Text Animation */
+.slide-in-text {
+  animation: slide-in 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* H2 & H3 Styling */
+h2, h3 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 15px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar li {
+  display: inline-block;
+  position: relative;
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 180px;
+  z-index: 1;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+}
+
+.navbar li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Image Styling */
+.center-img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Container */
+.container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container a {
+  display: inline-block;
+  margin: 10px 15px;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.container a:hover {
+  background-color: var(--hover-color);
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Section Styling */
+section {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+section h3 {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+section::after {
+  content: "";
+  display: block;
+  margin: 30px auto 10px;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-radius: 5px;
+}
+
+/* Lists */
+.profile-list, .skills-list {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1rem;
+}
+
+.skills-list li::before {
+  content: "✔ ";
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.interest-list {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Education Table */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.education-table thead {
+  background-color: var(--accent-color);
+}
+
+.education-table th,
+.education-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+.edu-logo {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.contact-section h2 {
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+.contact-info, .reference-info {
+  margin-top: 15px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.contact-info p, .reference-info p {
+  margin: 6px 0;
+}
+
+.reference-box {
+  background-color: var(--accent-color);
+  padding: 12px 16px;
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 6px;
+}
+
+/* Interest Section Media */
+.interest-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Track and Audio */
+.track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.track img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.track p {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Video */
+.interest-video {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Reference Form Styling */
+.contact-section form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: var(--primary-color);
+}
+
+.contact-section form input[type="text"],
+.contact-section form input[type="email"],
+.contact-section form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-section form textarea {
+  resize: vertical;
+}
+
+.contact-section form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section form button[type="submit"]:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive Columns */
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Animation */
+.fade-in {
+  animation: fade-in 1s ease-in-out both;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
